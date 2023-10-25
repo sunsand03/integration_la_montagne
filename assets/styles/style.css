@@ -14,6 +14,12 @@ body {
   margin: 0 auto;
 }
 
+h1, h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.5em;
+}
+
 ul {
   list-style: none;
 }
@@ -22,17 +28,30 @@ p {
   font-family: "Merriweather", serif;
 }
 
+button {
+  border: 1px solid black;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 15px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  margin: 40px 0;
+  cursor: pointer;
+}
+button:hover {
+  background: black;
+  color: rgba(248, 244, 244, 0.908);
+}
+
 header {
   color: rgba(248, 244, 244, 0.908);
   padding: 100px 10px;
+  position: relative;
 }
 header .header-content {
   padding-bottom: 80px;
 }
 header .header-content h1 {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  line-height: 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,36 +70,145 @@ header .header-content p {
   font-style: italic;
   opacity: 0.8;
 }
+header .header-content i {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
 header nav {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  background: rgba(245, 245, 245, 0.127);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 80%;
   margin: 0 auto;
 }
 header nav .menu {
-  width: 45%;
+  width: 70%;
 }
 header nav .menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   text-transform: uppercase;
   font-weight: 900;
+  font-size: 0.8rem;
+}
+header nav .menu ul li {
+  padding: 15px 10px;
+  margin-right: 10px;
+}
+header nav .menu ul li:hover {
+  background: rgb(244, 237, 237);
+  color: black;
 }
 header nav .social-networks {
-  width: 50%;
+  width: 30%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 15px 0;
 }
 header nav .social-networks ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+header nav .social-networks ul li {
+  margin-right: 30px;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  background: rgb(244, 237, 237);
+}
+main .headline {
+  position: relative;
+  padding: 80px 0;
+}
+main .headline p {
+  padding: 40px 0;
+}
+main .headline p::before {
+  content: "";
+  width: 25%;
+  height: 1px;
+  background: rgba(165, 161, 161, 0.316);
+  position: absolute;
+  left: 18%;
+  top: 129px;
+  -webkit-transform: translateX(-50% x);
+          transform: translateX(-50% x);
+}
+main .headline p::after {
+  content: "";
+  width: 25%;
+  height: 1px;
+  background: rgba(165, 161, 161, 0.316);
+  position: absolute;
+  right: 18%;
+  top: 129px;
+  -webkit-transform: translateX(-50% x);
+          transform: translateX(-50% x);
+}
+main .headline h2 {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 2.8rem;
+  font-weight: bolder;
+}
+main .headline p {
+  width: 60%;
+  margin: 0 auto;
+  font-style: italic;
+  line-height: 30px;
+}
+main .headline .picture-headline img {
+  width: 80%;
+}
+main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .content .left, main .content .right {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 0;
+  width: 48%;
+  border: 1px solid rgba(165, 161, 161, 0.316);
+}
+main .content .left .date, main .content .right .date {
+  margin-bottom: 20px;
+}
+main .content .left .picture-content img, main .content .right .picture-content img {
+  width: 80%;
+}
+
+footer .footer-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
