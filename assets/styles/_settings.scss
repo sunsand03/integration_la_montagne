@@ -1,6 +1,33 @@
-// polices
+// variables
+$white : rgba(248, 244, 244, 0.908);
+
+//mixins
+@mixin centerUniqueElement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+// paramètres généraux
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family: 'Inter', sans-serif;
-    font-family: 'Merriweather', serif;
     
+    background: url('../images/bg.jpg') center/cover fixed;    
+    min-height:100vh;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;   
 }
+ul{
+    list-style: none;
+}
+p{
+    font-family: 'Merriweather', serif;
+}
+
