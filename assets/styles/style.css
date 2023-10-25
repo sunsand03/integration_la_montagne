@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
 }
 
-h1, h2 {
+h1, h2, h3 {
   text-transform: uppercase;
   letter-spacing: 3px;
   line-height: 1.5em;
@@ -191,24 +191,118 @@ main .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 main .content .left, main .content .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 30px 0;
   width: 48%;
-  border: 1px solid rgba(165, 161, 161, 0.316);
+  border-top: 1px solid rgba(165, 161, 161, 0.316);
 }
 main .content .left .date, main .content .right .date {
   margin-bottom: 20px;
 }
+main .content .left h3, main .content .right h3 {
+  margin-bottom: 20px;
+  width: 50%;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 main .content .left .picture-content img, main .content .right .picture-content img {
   width: 80%;
+  margin: 20px 0 25px 0;
+}
+main .content .left .paraph, main .content .right .paraph {
+  line-height: 25px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 40px;
+}
+main .content .left button, main .content .right button {
+  width: 40%;
+  margin: 0 auto;
 }
 
 footer .footer-section {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: rgba(195, 192, 192, 0.839);
+  color: rgb(86, 83, 83);
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 5px;
+}
+footer .footer-section .form-contact form {
+  width: 80%;
+}
+footer .footer-section .form-contact form .name, footer .footer-section .form-contact form .email, footer .footer-section .form-contact form .message {
+  display: grid;
+  text-align: left;
+  padding: 20px 20px;
+}
+footer .footer-section .form-contact form .name label, footer .footer-section .form-contact form .email label, footer .footer-section .form-contact form .message label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  height: 20px;
+}
+footer .footer-section .form-contact form .name input, footer .footer-section .form-contact form .email input, footer .footer-section .form-contact form .message input {
+  margin: 0;
+  height: 40px;
+}
+footer .footer-section .form-contact form button {
+  width: 50%;
+  color: rgb(86, 83, 83);
+  margin: 40px 20px;
+}
+footer .footer-section .form-contact form .name {
+  grid-area: a1;
+}
+footer .footer-section .contact {
+  display: grid;
+  position: relative;
+}
+footer .footer-section .contact .adress, footer .footer-section .contact .phone, footer .footer-section .contact .email, footer .footer-section .contact .social {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 50px;
+}
+footer .footer-section .contact .adress::after, footer .footer-section .contact .phone::after, footer .footer-section .contact .email::after, footer .footer-section .contact .social::after {
+  content: "";
+  width: 25%;
+  height: 1px;
+  background: rgba(165, 161, 161, 0.316);
+  position: absolute;
+}
+footer .footer-section .contact .adress p, footer .footer-section .contact .phone p, footer .footer-section .contact .email p, footer .footer-section .contact .social p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+footer .footer-section .contact .adress ul, footer .footer-section .contact .phone ul, footer .footer-section .contact .email ul, footer .footer-section .contact .social ul {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }/*# sourceMappingURL=style.css.map */
