@@ -1,0 +1,102 @@
+main{
+    width: 85%;
+    margin: 0 auto 30px;
+    background: $white1;
+    .headline{
+        position: relative;
+        padding: 30px 0;
+        p{
+            padding: 40px 0;
+
+            &::before, &::after{
+                content: "";
+                width: 25%;
+                height: 1px;
+                position: absolute;
+                top: 94px;
+                transform: translateY(-50%x);
+                background: $grey1;
+
+                @media screen and (max-width:700px) {
+                    width: 30%;
+                }
+
+                @media screen and (max-width:400px) {
+                    width: 24%;
+                }
+            }
+
+            &::before{                
+                left:18%;
+                
+            }
+            &::after{
+                right:18%;                
+            }
+        }
+
+        h2{
+            @include title;
+            width: 60%;
+            margin: 0 auto;
+            font-size: 3rem;           
+        }
+
+        p{
+            width: 60%;
+            margin: 30px auto;
+            font-style: italic; 
+            line-height: 35px;
+        }
+
+        .picture-headline{
+            img{
+                width: 80%;                
+            }
+        }
+    }
+
+    .content{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        border-top: 1px solid $grey1;
+        
+        
+        .left, .right{            
+            padding: 60px ;          
+            
+            .date{
+                margin-bottom: 20px;
+                font-size: 0.75rem;
+            }
+            h3{                
+                margin-bottom: 20px 0;
+                @include title;
+                font-size: 1.2rem;
+                line-height: 28px;
+            }
+            .picture-content{
+                img{
+                    width: 80%;
+                    margin : 20px 0 25px 0;
+                }
+            }
+            .paraph{
+                line-height: 30px;
+                text-align: left;
+                margin: 20px;
+                padding: 0 25px;
+            }
+            button{
+                width: 40%;
+                margin: 0 auto;
+            }
+            
+        }
+        .left{
+            border-right: 1px solid $grey1;
+        }
+    }
+
+        
+}
