@@ -129,6 +129,11 @@ header .header-content h1 {
   font-size: 4rem;
   letter-spacing: 6px;
 }
+@media screen and (max-width: 700px) {
+  header .header-content h1 {
+    font-size: 2rem;
+  }
+}
 header .header-content p {
   margin: 40px auto 60px;
   font-style: italic;
@@ -211,6 +216,11 @@ header nav .menu li {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width: 700px) {
+  header nav .menu li {
+    font-size: 0.5rem;
+  }
+}
 header nav .menu li:first-child {
   background: rgb(243, 243, 243);
   color: rgb(17, 17, 17);
@@ -228,6 +238,11 @@ header nav .social-networks {
   display: flex;
   font-size: 1.1rem;
   margin-right: 10px;
+}
+@media screen and (max-width: 700px) {
+  header nav .social-networks {
+    display: none;
+  }
 }
 header nav .social-networks ul {
   width: 100%;
@@ -290,6 +305,11 @@ main .headline h2 {
   margin: 0 auto;
   font-size: 3rem;
 }
+@media screen and (max-width: 700px) {
+  main .headline h2 {
+    font-size: 1.5rem;
+  }
+}
 main .headline p {
   width: 60%;
   margin: 30px auto;
@@ -303,6 +323,11 @@ main .content {
   display: grid;
   grid-template-columns: 50% 50%;
   border-top: 1px solid rgb(209, 209, 209);
+}
+@media screen and (max-width: 700px) {
+  main .content {
+    grid-template-columns: 1fr;
+  }
 }
 main .content .left, main .content .right {
   padding: 60px;
@@ -345,6 +370,11 @@ footer {
   display: grid;
   grid-template-columns: 50% 50%;
 }
+@media screen and (max-width: 900px) {
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
 footer form {
   display: grid;
   gap: 18px;
@@ -381,6 +411,12 @@ footer .contact {
   color: rgb(105, 105, 105);
   border: 1px solid rgb(209, 209, 209);
 }
+@media screen and (max-width: 900px) {
+  footer .contact div:nth-child(1) {
+    border-top: 1px solid rgb(209, 209, 209);
+    padding-bottom: 20px;
+  }
+}
 footer .contact div {
   border-bottom: 1px solid rgb(209, 209, 209);
   display: grid;
@@ -388,6 +424,11 @@ footer .contact div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (max-width: 900px) {
+  footer .contact div {
+    grid-template-columns: 45% 55%;
+  }
 }
 footer .contact div h4 {
   font-family: inter-bold, sans-serif;
